@@ -38,12 +38,12 @@ getgenv().gagConfig = {
     BUY_GEAR_SHOP = { "Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler", "Trading Ticket" },
     USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Grandmaster Sprinkler" },
 
-    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1305948515234742362/S6IwN-9JA-jpemtbv5GUCTyTlzhA5rpH6ac7JrVMQQid8ieYlxEZ46IYyHDQG0hlOAA2",
+    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1381259950566805524/cuP4uk2P4CpBFT5kMH7-bhNA8ZtBN6ZqdycF_F7FJ14JcfYuq5vbdArnBJcixsYg1fh1",
     SEED_WEBHOOK_URL = "", 
     NOTIFY_PETS = { "Gnome", "Griffin", "Golden Goose", "Lobster Thermidor", "French Fry Ferret", "Corrupted Kitsune", "Raiju", "Mizuchi", "Bald Eagle", "Koi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Brontosaurus", "T-Rex", "Ankylosaurus", "Spinosaurus" },
     NOTIFY_PETS_WEIGHT = 7,
-    DISCORD_ID = "474925167886336001",
-    WEBHOOK_NOTE = "53egod",
+    DISCORD_ID = "707216077179977780",
+    WEBHOOK_NOTE = "Restlenn",
     SHOW_WEBHOOK_USERNAME = true,
     SHOW_WEBHOOK_JOBID = true,
 }
