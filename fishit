@@ -1,4 +1,4 @@
-setfpscap(7)
+setfpscap(5)
 _G.FishItConfig = _G.FishItConfig or {
     ["Fishing"] = {
         ["Auto Perfect"] = true, -- Set false if u need faster fishing
