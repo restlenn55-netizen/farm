@@ -20,7 +20,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Selling"] = {
         ["Auto Sell"] = true,
-        ["Auto Sell Threshold"] = "Legendary",
+        ["Auto Sell Threshold"] = "Mythic",
     },
     ["Doing Quest"] = {
         ["Auto Ghostfinn Rod"] = true,
@@ -35,7 +35,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["WebHook"] = {
         ["Link Webhook"] = "https://discord.com/api/webhooks/1429832302799622316/CQflqZXsB2n6oXDu6tFCX8OCdH6A1-VzHd_qAu-e3uquhUnQBvdDbFnESBYYhZ_9IU45",
-        ["Auto Sending"] = false,
+        ["Auto Sending"] = true,
         ["Category"] = {"SECRET"},   
     },
     ["Weather"] = {
