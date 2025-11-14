@@ -20,7 +20,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Selling"] = {
         ["Auto Sell"] = true,
-        ["Auto Sell Threshold"] = "Legendary",
+        ["Auto Sell Threshold"] = "Mythic",
         ["Auto Sell Every"] = 100,
     },
     ["Doing Quest"] = {
@@ -35,8 +35,8 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Minimum Rod"] = "Astral Rod",
     },
     ["WebHook"] = {
-        ["Link Webhook"] = "",
-        ["Auto Sending"] = false,
+        ["Link Webhook"] = "https://discord.com/api/webhooks/1429832302799622316/CQflqZXsB2n6oXDu6tFCX8OCdH6A1-VzHd_qAu-e3uquhUnQBvdDbFnESBYYhZ_9IU45",
+        ["Auto Sending"] = true,
         ["Category"] = {"Secret"},   
     },
     ["Weather"] = {
@@ -89,7 +89,7 @@ _G.FishItConfig = _G.FishItConfig or {
             ["Fisherman Island"] = {"Starter Rod"}, -- Do not change
             ["Kohana Volcano"] = {"Grass Rod", "Midnight Rod"},
             ["Tropical Grove"] = {"Astral Rod"},
-            ["Crater Island"] = {"Ghostfinn Rod", "Angler Rod", "Ares Rod"},
+            ["Kohana Volcano"] = {"Ghostfinn Rod", "Angler Rod", "Ares Rod"},
         },
     },
 
