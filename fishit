@@ -12,7 +12,16 @@ setfpscap(3)
 
 _G.FishItConfig = _G.FishItConfig or {
     ["Fishing"] = {
-        ["Auto Perfect"] = true, -- Set false if u need faster fishing
+        ["Auto Perfect"] = true,
+    },
+    ["Auto Trade"] = {
+        ["Enabled"] = false,
+        ["Whitelist Username"] = {""},
+        ["Category Fish"] = { -- Only Select one, fill in the fish category or fish name
+            "Secret",
+        },
+        ["Fish Name"] = {
+        },
     },
     ["Farm Coin Only"] = {
         ["Enabled"] = false, -- Farm coins only [ cant buy rod, bait, enchant, weather ]
@@ -37,7 +46,9 @@ _G.FishItConfig = _G.FishItConfig or {
     ["WebHook"] = {
         ["Link Webhook"] = "https://discord.com/api/webhooks/1429832302799622316/CQflqZXsB2n6oXDu6tFCX8OCdH6A1-VzHd_qAu-e3uquhUnQBvdDbFnESBYYhZ_9IU45",
         ["Auto Sending"] = true,
-        ["Category"] = {"Secret"},   
+        ["Category"] = {"Secret"},
+
+        ["Link Webhook Quest Complete"] = "https://discord.com/api/webhooks/1441967683485827105/t7W_UssUa2il1HAw9v5Scep7Fizlh68wuM0vR9VJxR8hEoA9h8EeOmWglOMMUOAjZxrG",
     },
     ["Weather"] = {
         ["Auto Buying"] = false,
@@ -47,7 +58,7 @@ _G.FishItConfig = _G.FishItConfig or {
         },
     },
     ["Event"] = {
-        ["Start Farm"] = false,
+        ["Start Farm"] = true,
         ["Minimum Rod"] = "Ghostfinn Rod",
         ["Event List"] = {
             "Megalodon Hunt",
@@ -65,9 +76,8 @@ _G.FishItConfig = _G.FishItConfig or {
             "Prismatic I",
         },
     },
-    ["Bobber"] = {
+    ["Bait List"] = {
         ["Auto Buying"] = true,
-        ["Auto Equip"] = true,
         ["Buy List"] = {
             "Midnight Bait",
             "Chroma Bait",
@@ -77,7 +87,6 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Rod List"] = {
         ["Auto Buying"] = true,
-        ["Auto Equip"] = true,
         ["Buy List"] = {
             "Grass Rod",
             "Midnight Rod",
@@ -86,17 +95,20 @@ _G.FishItConfig = _G.FishItConfig or {
             "Angler Rod",
         },
         ["Location Rods"] = { -- Farm location and minimum rod to start on that location, also only 1 rod and only 1 location
-            ["Fisherman Island"] = {"Starter Rod"}, -- Do not change
+            ["Fisherman Island"] = {"Starter Rod"},
             ["Kohana Volcano"] = {"Grass Rod", "Midnight Rod"},
             ["Tropical Grove"] = {"Astral Rod"},
-            ["Kohana Volcano"] = {"Ghostfinn Rod", "Angler Rod", "Ares Rod"},
+            ["Kohana Volcano"] = {"Element Rod", "Ghostfinn Rod", "Angler Rod", "Ares Rod"},
         },
     },
 
     ["ExtremeFpsBoost"] = true,
     ["UltimatePerformance"] = false,
-    ["3DRender"] = true,
+    ["Disable3DRender"] = true,
     ["AutoRemovePlayer"] = true,
+
+    ["AutoReconnect"] = true,
+    ["HideGUI"] = true,
 }
 
 script_key="9A8027000844EC647E2392C070A5291A";
