@@ -59,6 +59,7 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Auto Buying"] = true,
         ["Minimum Rod"] = "Ghostfinn Rod",
         ["Weather List"] = {
+            "Shark Hunt",
             "Cloudy",
             "Storm",
         },
@@ -67,6 +68,7 @@ _G.FishItConfig = _G.FishItConfig or {
         ["Start Farm"] = true,
         ["Minimum Rod"] = "Ghostfinn Rod",
         ["Event List"] = {
+            "Shark Hunt",
             "Black Hole",
             "Shocked",
             "Ghost Worm",
@@ -76,12 +78,10 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Enchant"] = {
         ["Auto Enchant"] = true,
-        ["Roll Enchant"] = false, -- Roll enchant until get Leprechaun II
+        ["Roll Enchant"] = true, -- Roll enchant until get Leprechaun II
         ["Minimum Rod"] = "Astral Rod",
         ["Enchant List"] = {
             "Leprechaun II",
-            "Mutation Hunter II",
-            "Prismatic I",
         },
     },
     ["Bait List"] = {
@@ -118,7 +118,7 @@ _G.FishItConfig = _G.FishItConfig or {
     ["HideGUI"] = false,
 }
 
-script_key="9A8027000844EC647E2392C070A5291A";
+script_key="6DC10E67351FC38A14323B1B03A5C335";
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/roblog/refs/heads/main/fishit-78c86024ea87c8eca577549807421962.lua"))()
 
