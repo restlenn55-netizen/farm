@@ -118,7 +118,7 @@ _G.FishItConfig = _G.FishItConfig or {
     ["HideGUI"] = false,
 }
 
-script_key="6DC10E67351FC38A14323B1B03A5C335";
+script_key="9A8027000844EC647E2392C070A5291A";
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/roblog/refs/heads/main/fishit-78c86024ea87c8eca577549807421962.lua"))()
 
