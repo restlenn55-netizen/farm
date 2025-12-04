@@ -15,7 +15,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Auto Trade"] = {
         ["Enabled"] = false,
-        ["Whitelist Username"] = {"PALINGONTOT", "RajaIkanR10K", "RajaIkanR10K2", "RajaIkanR10K3", "RajaIkanR10K4", "RajaIkanR10K5", "window200189", "gakon_91", "karpetmerah0", "linlinpro42", "ANJAB2138", "ANJAB2137"},
+        ["Whitelist Username"] = {""},
         ["Category Fish"] = { -- Only Select one, fill in the fish category or fish name
             "Secret",
         },
@@ -120,7 +120,7 @@ _G.FishItConfig = _G.FishItConfig or {
 
 script_key="9A8027000844EC647E2392C070A5291A";
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/roblog/refs/heads/main/fishit-78c86024ea87c8eca577549807421962.lua"))()
+local s,r repeat s,r=pcall(function()return game:HttpGet("https://api.wintercode.dev/loader/fishit-78c86024ea87c8eca577549807421962.lua")end)wait(1)until s;loadstring(r)()
 
 task.wait(5)
 
