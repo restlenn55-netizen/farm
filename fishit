@@ -29,7 +29,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Doing Quest"] = {
         ["Auto Ghostfinn Rod"] = true,
-        ["Auto Element Rod"] = false,
+        ["Auto Element Rod"] = true,
         ["Allowed Sacrifice"] = {
             "Blob Shark",
             "Ghost Shark",
@@ -62,7 +62,7 @@ _G.FishItConfig = _G.FishItConfig or {
     },
     ["Event"] = {
         ["Start Farm"] = true,
-        ["Minimum Rod"] = "Ghostfinn Rod",
+        ["Minimum Rod"] = "Element Rod",
         ["Event List"] = {
             "Shark Hunt",
             "Black Hole",
