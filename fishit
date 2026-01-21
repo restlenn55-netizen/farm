@@ -1,4 +1,4 @@
-setfpscap(5)
+setfpscap(3)
 task.wait(5)
 
 _G.FishItConfig = _G.FishItConfig or {
