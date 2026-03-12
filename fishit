@@ -1,5 +1,5 @@
 task.spawn(function() 
-getgenv().fpslock = 5
+getgenv().fpslock = 3
 getgenv().whitescreen = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vuthaison1308/vuthaison1308/refs/heads/main/fpslock_whitecreen.lua"))()
 end)
@@ -8,7 +8,7 @@ task.spawn(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/list/refs/heads/main/game"))()
 end)
 
-setfpscap(5)
+setfpscap(3)
 task.wait(5)
 
 task.wait(30)
@@ -323,6 +323,6 @@ game:GetService("Settings").Rendering.QualityLevel = 3  -- Set rendering quality
 
 task.wait(50)
 
-getgenv().fpslock = 5
+getgenv().fpslock = 3
 getgenv().whitescreen = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vuthaison1308/vuthaison1308/refs/heads/main/fpslock_whitecreen.lua"))()
