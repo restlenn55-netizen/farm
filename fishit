@@ -12,173 +12,45 @@ setfpscap(3)
 task.wait(5)
 
 task.wait(30)
-_G.FishItConfig = _G.FishItConfig or {
-    ["Fishing"] = {
-        ["Auto Perfect"] = false,
-        ["Random Result"] = false,
+script_key="NNsZVqtvcpwhoctANlYJevttOMPrMIsR";
+setfpscap(3)
 
-        ["Auto Favorite"] = true,
-        ["Auto Unfavorite"] = false,
-        ["Fish Name"] = {
-            "Sacred Guardian Squid",
-            {Name = "Ruby", Variant = "Gemstone"},
-            -- {Variant = "Leviathan Rage"}, -- Variant Only
-            -- {Tier = "Secret", Variant = "Leviathan Rage"},  -- Tier + Variant
-        },
+getgenv().sailorPieceConfig = {  
+    AUTO_UPDATE_RESTART = true,
+    FARM_UNTIL_LEVEL = 13000,
 
-        ["Auto Accept Trade"] = true,
-        ["Auto Friend Request"] = false,
-    },
-    ["Auto Trade"] = {
-        ["Enabled"] = false,
-        ["Whitelist Username"] = {""},
-        ["Category Fish"] = {
-            "Secret",
-            -- {Tier = "Mythic", Variant = "Stone"}, -- Tier + Variant
-        },
-        ["Fish Name"] = {
-            "Sacred Guardian Squid",
-            {Name = "Ruby", Variant = "Gemstone"},
-            -- {Variant = "Leviathan Rage"}, -- Variant Only
-        },
-        ["Item Name"] = {
-            "Evolved Enchant Stone",
-        },
-    },
-    ["Farm Coin Only"] = {
-        ["Enabled"] = false, -- Farm coins only [ cant buy rod, bait, enchant, weather ]
-        ["Target"] = 190000,
-    },
-    ["Selling"] = {
-        ["Auto Sell"] = true,
-        ["Auto Sell Threshold"] = "Mythic",
-        ["Auto Sell Every"] = 100,
-    },
-    ["Doing Quest"] = {
-        ["Auto Ghostfinn Rod"] = true,
-        ["Auto Element Rod"] = false,
-        ["Auto Diamond Rod"] = false,
-        ["Unlock Ancient Ruin"] = false,
-        ["Allowed Sacrifice"] = {
-            "Ghost Shark",
-            "Cryoshade Glider",
-            "Panther Eel",
-            "Queen Crab",
-            "King Crab",
-            "Giant Squid",
-            "Blob Shark",
-            "Ghost Shark",
-        },
-        ["FARM_LOC_SECRET_SACRIFICE"] = "Treasure Room",
+    DO_REPEATABLE_QUEST = "QuestNPC19",
+    AUTO_FARM = { "Jinwoo Boss", "Alucard Boss", "Yuji Boss", "Gojo Boss", "Sukuna Boss", "Anos Boss", "Aizen Boss", "Strongest of Today Boss", "Strongest in History Boss", "Rimuru Boss", "Saber Boss", "QinShi Boss", "Ichigo Boss", "ArenaFighter" },
+    SUMMON_BOSS = { "Ichigo", "Qin Shi", "Saber" },
 
-        ["Minimum Rod"] = "Astral Rod",
-    },
-    ["WebHook"] = {
-        ["Link Webhook"] = "https://discord.com/api/webhooks/1445757877397622867/7t8lqGbJNn6dVx-r38t6T8IGy3g-6LEdtWAvm-MWwtNuRVIxBwJ5OmyFe3KuAUqg_vG4",
-        ["Auto Sending"] = true,
-        ["Category"] = {"Secret"},
+    EQUIP_SWORD = { "Ichigo", "Gryphon", "Dark Blade", "Katana" },
+    BLESS_WEAPON = { ["Ichigo"] = 10, ["Gryphon"] = 6, ["Dark Blade"] = 3 },
 
-        ["Link Webhook Quest Complete"] = "https://discord.com/api/webhooks/1445758063121268767/H_yIOl_nmEL9OSnotxZVuvrIRbeLXaZgpNh4IZ9S8JypNWvCD5Dhc3bK2LEhRd3hTUn-",
-    },
-    ["Weather"] = {
-        ["Auto Buying"] = false,
-        ["Minimum Rod"] = "Astral Rod",
-        ["Weather List"] = {
-            "Wind",
-        },
-    },
-    ["Potions"] = {
-        ["Auto Use"] = true,
-        ["Minimum Rod"] = "Astral Rod",
-    },
-    ["Totems"] = {
-        ["Auto Use"] = true,
-        ["Minimum Rod"] = "Ghostfinn Rod",
-        ["Buy List"] = {
-            ["Luck Totem"] = 5,
-            "Mutation Totem",
-            "Shiny Totem",
-        },
-    },
-    ["Event"] = {
-        ["Start Farm"] = true,
-        ["Minimum Rod"] = "Ghostfinn Rod",
-        ["Event List"] = {
-            "Black Hole",
-            "Shocked",
-            "Ghost Worm",
-            "Admin - Ghost Worm",
-            "Meteor Rain",
-            -- ["Ancient Lochness Monster"] = true,
-        },
-    },
-    ["Enchant"] = {
-        ["Auto Enchant"] = true,
-        ["Roll Enchant"] = false,
-        ["Evolved Roll Enchant"] = true,
-        ["Enchant List"] = {
-            "Reeler II",           -- [1] Primary target for Roll Enchant
-            "SECRET Hunter",       -- [2] Fallback for Roll Enchant
-            "Shark Hunter",
-            "Mutation Hunter III",
-            "Leprechaun II",
-            "Mutation Hunter II",
-            "Prismatic I",
-        },
-        ["Second Enchant"] = false,
-        ["Allowed Sacrifice"] = {
-            "Frostborn Shark",
-            "Cryoshade Glider",
-        },
-        ["Second Enchant List"] = {
-            "Reeler I",
-            "Prismatic I",
-            "Mutation Hunter II",
-        },
-        ["Minimum Rod"] = "Ghostfinn Rod",
-    },
-    ["Bait List"] = {
-        ["Auto Buying"] = true,
-        ["Buy List"] = {
-            "Midnight Bait",
-            "Chroma Bait",
-            "Corrupt Bait",
-            "Aether Bait",
-        },
-        ["Endgame"] = "",
-    },
-    ["Rod List"] = {
-        ["Auto Buying"] = true,
-        ["Buy List"] = {
-            "Grass Rod",
-            "Midnight Rod",
-            "Astral Rod",
-            "Ares Rod",
-            "Angler Rod",
-            "Singularity Bait",
-        },
-        ["Location Rods"] = {
-            ["Fisherman Island"] = {"Starter Rod"},
-            ["Kohana Volcano"] = {"Grass Rod", "Midnight Rod"},
-            ["Tropical Grove"] = {"Astral Rod"},
-            ["Treasure Room"] = {"Element Rod", "Ghostfinn Rod", "Angler Rod", "Ares Rod"},
-        },
-        ["Endgame"] = "",
-    },
+    STAT_POINT_PERCENTAGE = { ["Sword"] = 90, ["Defense"] = 10, ["Melee"] = 0, ["Power"] = 0 },
+    USE_ITEM = { "Common Chest", "Rare Chest", "Epic Chest", "Legendary Chest", "Mythical Chest" },
+    BUY_MERCHANT = {},
 
-    ["ExtremeFpsBoost"] = true,
-    ["UltimatePerformance"] = false,
-    ["Disable3DRender"] = true,
-    ["AutoRemovePlayer"] = true,
+    REROLL_RACE_UNTIL = { "Warlord", "Sunborn", "Servant", "Kitsune", "Swordblessed", "Galevorn", "Leviathan", "Oni", "Slime" },
+    REROLL_CLAN_UNTIL = { "Pride", "Monarch", "Alter", "Espada", "Voldigoat", "Eminence", "Upper" },
+    REROLL_TRAIT_UNTIL = { "Overlord", "Cataclysm", "Singularity", "Celestial", "Emperor" },
+    REROLL_STAT_UNTIL = { ["Damage"] = "S", ["Defense"] = "S", ["CooldownReduction"] = "S", ["CritChance"] = "S", ["CritDamage"] = "S", ["DamageReduction"] = "S", ["Luck"] = "SSS" },
+    REROLL_PASSIVE_UNTIL = { ["Gryphon"] = { "Fortune Chosen", "Executioner", "Damage V" }, ["Ichigo"] = { "Fortune Chosen", "Executioner", "Damage V" } },
+    REROLL_POWER_UNTIL = { "Cursebrand", "Colossus", "Eternal", "Abyssal", "Apex" },
 
-    ["AutoReconnect"] = false,
-    ["HideGUI"] = false,
-    ["EXIT_MAP_IF_DISCONNECT"] = false,
-}
-script_key="9A8027000844EC647E2392C070A5291A";
+    DELETE_ARTIFACT_RARITY = { "Common", "Rare" },
+    EQUIP_ARTIFACT_SET = "Abyssal Crown",
 
-local s,r repeat s,r=pcall(function()return game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/roblog/refs/heads/main/fishit-78c86024ea87c8eca577549807421962.lua")end)wait(1)until s;loadstring(r)()
+    -- Discord
+    WEBHOOK_ITEM_NAME = { "Aura Crate", "Cosmetic Crate", "Secret Chest" },
+    WEBHOOK_URL = "https://discord.com/api/webhooks/1488845828310175788/GGYN4TPNlNd_fsPRKKZqwRA5m4idG_vyukCxGpO8DnlqJxsg3inRzK153lan8ChwX3Hc",
+    DISCORD_ID = "707216077179977780",
+    WEBHOOK_NOTE = "",
+    SHOW_PUBLIC_DISCORD_ID = true,
+    SHOW_WEBHOOK_USERNAME = true,
+    SHOW_WEBHOOK_JOBID = true,
+}   
 
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/1c7ac2a2f86ecf894218a424a1be7667.lua"))()
 task.wait(30)
 
 task.wait(100)
