@@ -9,7 +9,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/list/refs/he
 end)
 
 setfpscap(3)
-task.wait(120)
+task.wait(180)
 getgenv().Config = {
     ["PetPen"] = {
         ["EggToBuy"] = "Endangered Egg",
