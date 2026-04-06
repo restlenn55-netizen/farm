@@ -9,7 +9,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/list/refs/he
 end)
 
 setfpscap(3)
-task.wait(180)
+task.wait(30)
 getgenv().Config = {
     ["PetPen"] = {
         ["EggToBuy"] = "Endangered Egg",
@@ -40,7 +40,7 @@ getgenv().Config = {
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3d319dc0e1bace3baf48a00d3721e614.lua"))()
 
-task.wait(50)
+task.wait(100)
 local Player = game.Players.LocalPlayer
 for i, v in Player.PlayerGui:GetDescendants() do
     pcall(function() v.Enabled = false end)
