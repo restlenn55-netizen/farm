@@ -9,10 +9,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FnDXueyi/list/refs/he
 end)
 
 setfpscap(3)
-setfpscap(5) -- jangan terlalu rendah, 3 itu terlalu ekstrem
-
-repeat task.wait() until game:IsLoaded()
-
 getgenv().Config = {
     ["PetPen"] = {
         ["EggToBuy"] = "Endangered Egg",
@@ -20,60 +16,28 @@ getgenv().Config = {
     ["PetReleaser"] = {
         ["RaritiesToMakeNeon"] = {"common", "uncommon", "rare", "ultra_rare"},
         ["RaritiesToMakeMega"] = {},
+
         ["RaritiesToRelease"] = {"common", "uncommon", "rare", "ultra_rare", "legendary"}
     },
     ["AutoTrade"] = {
-        ["TradeUsers"] = {""},
+        ["TradeUsers"] = {
+            "",
+        },
         ["Pets"] = {"Giant Panda", "Dango Penguins", "Dragonfruit Fox", "Emberlight", "Frostbite Bear", "Diamond Unicorn", "Silverback Gorilla", "Sea Turtle", "Admin Abuse Egg", "Gumball Caterpillar", "Easter Bunny"}
     },
     ["AutoChangeConfig"] = {
         ["CrystalEggAmount"] = 10000,
         ["TradeablePets"] = 30000,
-        ["CollectServers"] = {""}
+        ["CollectServers"] = {
+            "",
+        }
     },
     ["OpenCrystalEggs"] = true,
     ["AutoBuyJiggly"] = true,
     ["UseAgeUpPotions"] = true,
     ["WebhookURL"] = "https://discord.com/api/webhooks/1490538501979246593/W-v1w1ymn5ZG6tf2iBqtWVpT9VpY65S3xkRVv0beNtGehefS-GgRgZwF0TOVQUhyxi83",
 }
-
-local URL = "https://api.luarmor.net/files/v4/loaders/3d319dc0e1bace3baf48a00d3721e614.lua"
-
-local function runScript()
-    local ok, err = pcall(function()
-        loadstring(game:HttpGet(URL))()
-    end)
-    return ok, err
-end
-
--- retry load
-local success = false
-for i = 1, 5 do
-    local ok, err = runScript()
-    if ok then
-        success = true
-        print("Loaded on attempt", i)
-        break
-    else
-        warn("Fail attempt "..i, err)
-        task.wait(3)
-    end
-end
-
--- kalau masih gagal, loop retry perlahan
-if not success then
-    warn("Switching to persistent retry...")
-    task.spawn(function()
-        while true do
-            local ok = runScript()
-            if ok then
-                print("Recovered and executed!")
-                break
-            end
-            task.wait(10)
-        end
-    end)
-end
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3d319dc0e1bace3baf48a00d3721e614.lua"))()
 
 task.wait(100)
 local Player = game.Players.LocalPlayer
