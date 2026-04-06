@@ -38,7 +38,38 @@ getgenv().Config = {
     ["UseAgeUpPotions"] = true,
     ["WebhookURL"] = "https://discord.com/api/webhooks/1490538501979246593/W-v1w1ymn5ZG6tf2iBqtWVpT9VpY65S3xkRVv0beNtGehefS-GgRgZwF0TOVQUhyxi83",
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3d319dc0e1bace3baf48a00d3721e614.lua"))()
+
+-- Anti double execute
+if getgenv().ScriptLoaded then
+    warn("Script already running, skipping re-execution.")
+    return
+end
+getgenv().ScriptLoaded = true
+
+-- Retry system
+local MAX_RETRIES = 5
+local attempt = 0
+local success = false
+
+while attempt < MAX_RETRIES and not success do
+    attempt += 1
+
+    local ok, err = pcall(function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3d319dc0e1bace3baf48a00d3721e614.lua"))()
+    end)
+
+    if ok then
+        success = true
+        print("Script loaded successfully on attempt:", attempt)
+    else
+        warn("Load failed (Attempt " .. attempt .. "):", err)
+        task.wait(2)
+    end
+end
+
+if not success then
+    warn("Script failed to execute after " .. MAX_RETRIES .. " attempts.")
+end
 
 task.wait(100)
 local Player = game.Players.LocalPlayer
