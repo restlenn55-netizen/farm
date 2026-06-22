@@ -32,8 +32,8 @@ getgenv().GAG2Config = {
     },
 
     PLANT_SEED = {  -- ["Seed Name"] = Amount
-        ["Carrot"] = 0, 
-        ["Strawberry"] = 0,
+        ["Carrot"] = 5, 
+        ["Strawberry"] = 5,
         ["Blueberry"] = 0,
         ["Tulip"] = 0,
         ["Tomato"] = 0,
@@ -61,8 +61,8 @@ getgenv().GAG2Config = {
     },
 
     BUY_SEED = {  -- ["Seed Name"] = Amount
-        ["Carrot"] = 0, 
-        ["Strawberry"] = 0,
+        ["Carrot"] = 5, 
+        ["Strawberry"] = 5,
         ["Blueberry"] = 0,
         ["Tulip"] = 0,
         ["Tomato"] = 0,
