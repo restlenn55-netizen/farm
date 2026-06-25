@@ -4,9 +4,6 @@ getgenv().whitescreen = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vuthaison1308/vuthaison1308/refs/heads/main/fpslock_whitecreen.lua"))()
 end)
 
-task.wait(5)
-
-task.wait(30)
 script_key="yHgDuHtWpdqzZAprxZKMTINnwyetGVvX";
 getgenv().GAG2Config = {
     FPS_CAP = 5,  -- MUST USE 5+ FPS FOR TWEENING
