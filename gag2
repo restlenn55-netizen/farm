@@ -4,58 +4,16 @@ getgenv().whitescreen = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vuthaison1308/vuthaison1308/refs/heads/main/fpslock_whitecreen.lua"))()
 end)
 
-script_key="yHgDuHtWpdqzZAprxZKMTINnwyetGVvX";
-getgenv().GAG2Config = {
-    FPS_CAP = 5,  -- MUST USE 5+ FPS FOR TWEENING
-    AUTO_UPDATE_RESTART = true,
-    COLLECT_FRUIT_DELAY = 20,
-
-    BUY_PET = {  -- ["Pet Name"] = Amount
-        ["BlackDragon"] = 99, 
-        ["GoldenDragonfly"] = 99, 
-        ["Unicorn"] = 99,
-        ["Raccoon"] = 99, 
-        ["IceSerpent"] = 99,
-
-        ["Robin"] = 10,
-        ["Deer"] = 10,
+setfpscap(5)
+script_key = "rqUIBQPoIGiGXfOSCuPezhAsKMSDQwzO";
+getgenv().UserConfig = {
+    ["FPS Cap"] = 5,
+    ["Auto Buy Seed"] = true,
+    ["Auto Plant Seed"] = true,
+    ["Limit Plant Seed"] = {
+        ["Carrot"] = 50, 
     },
-
-    EQUIP_PET = {  -- {"Pet Name", Amount to Equip, Priority}
-        {"Robin", 6, 3},
-        {"Deer", 6, 4},
-    },
-
-    PLANT_SEED = {  -- ["Seed Name"] = Amount
-        ["Carrot"] = 4, 
-        ["Strawberry"] = 4,
-        ["Blueberry"] = 4,
-        ["Tulip"] = 4,
-        ["Tomato"] = 4,
-        ["Apple"] = 4,
-        ["Bamboo"] = 200,
-        ["Corn"] = 4,
-        ["Cactus"] = 4,
-        ["Pineapple"] = 4,
-        ["Mushroom"] = 200,
-        ["Green Bean"] = 200,
-        ["Banana"] = 10,
-        ["Grape"] = 10,
-        ["Coconut"] = 10,
-        ["Mango"] = 10,
-        ["Dragon Fruit"] = 10,
-        ["Acorn"] = 10,
-        ["Cherry"] = 10,
-        ["Sunflower"] = 10,
-        ["Venus Fly Trap"] = 10,
-        ["Pomegranate"] = 10,
-        ["Poison Apple"] = 10,
-        ["Venom Spitter"] = 10,
-        ["Moon Bloom"] = 10,
-        ["Dragon's Breath"] = 10,
-    },
-
-    BUY_SEED = {  -- ["Seed Name"] = Amount
+    ["Limit Buy Seed"] = {
         ["Carrot"] = 5, 
         ["Strawberry"] = 5,
         ["Blueberry"] = 5,
@@ -65,72 +23,91 @@ getgenv().GAG2Config = {
         ["Bamboo"] = 9999,
         ["Corn"] = 5,
         ["Cactus"] = 5,
-        ["Pineapple"] = 5,
+        ["Pineangle"] = 5,
         ["Mushroom"] = 9999,
-        ["Green Bean"] = 9999,
+        ["Green Bean"] = 5,
         ["Banana"] = 5,
-        ["Grape"] = 5,
-        ["Coconut"] = 5,
-        ["Mango"] = 5,
-        ["Dragon Fruit"] = 5,
-        ["Acorn"] = 5,
-        ["Cherry"] = 5,
-        ["Sunflower"] = 5,
-        ["Venus Fly Trap"] = 5,
-        ["Pomegranate"] = 5,
-        ["Poison Apple"] = 5,
-        ["Venom Spitter"] = 9999,
-        ["Moon Bloom"] = 9999,
-        ["Dragon's Breath"] = 9999,
+        ["Moon Bloom"] = 50000,
+        ["Dragon's Breath"] = 50000,
     },
-
-    COLLECT_PLANT_IF_MUTATED = { "Mushroom" },  -- Only collect fruit when have ANY mutation
-    FAVOURITE_FRUIT = {},  -- ["Fruit Name"] = {} ... or ... ["Fruit Name"] = { "Gold", "Rainbow" }
-    SELL_ALL_DAILY_DEAL = true,
-    SELL_ALL_DELAY = 20,    
-
-    FOCUS_RAINBOW_GOLD_SEED = false,  -- set true if public server (instant collect), false for slightly slower collect
-    MAX_PET_EQUIP = 6,
-    BUY_GEAR_MIN_SHECKLE = 1000000, 
-    EXPAND_PLOT = 2,  -- 0 = No expand, 3 = expand plot 3 times
-    USE_SPRINKLER = {},  -- "Sprinkler Name"
-
-    BUY_GEAR = {  -- ["Gear Name"] = Amount
-        ["Super Watering Can"] = 9999,
-        ["Super Sprinkler"] = 9999,
-    },  
-    BUY_CRATE = {},  -- ["Crate Name"] = Amount
-
-    -- Auto Mail
-    AUTO_MAIL = {
-	["Hirottidayo"] = {
-        ["Super Sprinkler"] = 1,
-        ["Super Watering Can"] = 1,
-        ["IceSerpent"] = 1,
-        ["BlackDragon"] = 1,
-        ["Unicorn"] = 1,
-        ["Raccoon"] = 1,
-        ["Raccoon"] = 1,
-        ["GoldenDragonfly"] = 1,
-        ["Dragon's Breath"] = 1,
-        ["Moon Bloom"] = 1,
-        ["Venom Spitter"] = 1
-    }
-},  -- ["Username"] = { ["Item Name"] = Amount }
-    COLLECT_MAIL = true,
-
-    -- Discord
-    WEBHOOK_PET_NAME = {},
-    WEBHOOK_PET_RARITY = { "Mythic", "Super", "Secret" },
-    WEBHOOK_URL = "",
-    DISCORD_ID = "",
-    WEBHOOK_NOTE = "",  -- Private Webhook
-    SHOW_PUBLIC_DISCORD_ID = true,
-    SHOW_WEBHOOK_USERNAME = true,  -- Private Webhook
-    SHOW_WEBHOOK_JOBID = true,  -- Private Webhook
+["Blacklist Shovel"] = {"Dragon's Breath", "Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
+["Shovel Plant Once"] = {},
+    ["Favorite"] = {
+        ["Horned Melon"] = {"Rainbow", "Gold"},
+    },
+    ["Buy Pets"] = {
+        ["Frog"] = {Huge = 99, Rainbow = 99}, -- mua 99 Huge, 99 Rainbow (không mua pet Normal, Big)
+        ["Bunny"] = {Huge = 99, Rainbow = 99},
+        ["Turtle"] = {Huge = 99, Rainbow = 99},
+        ["Owl"] = {Huge = 99, Rainbow = 99},
+        ["Deer"] = {Huge = 99, Rainbow = 99},
+        ["Robin"] = {Big = 99, Huge = 99, Rainbow = 99},
+        ["Bee"] = {Big = 99, Huge = 99, Rainbow = 99},
+        ["Monkey"] = 999, -- mua 999 tất cả loại
+        ["Golden Dragonfly"] = 999,
+        ["Unicorn"] = 999,
+        ["Raccoon"] = 999,
+        ["Black Dragon"] = 999,
+    },
+    ["Equip Pets"] = {
+        {"Bunny", 5, 3},
+    },
+    ["Expand Plot"] = true,
+    ["Plot Expansions"] = 3,
+    ["Unlock Pet Slots"] = 5,
+    ["Auto Collect Seed Packs"] = true,
+    ["Gears"] = {
+        ["Buy Gear"] = {
+     -- xoá -- dùm nếu muốn mua
+            -- "Common Watering Can",
+            -- "Common Sprinkler",
+            -- "Uncommon Sprinkler",
+            -- "Rare Sprinkler",
+            -- "Legendary Sprinkler",
+            -- "Super Sprinkler",
+            -- "Super Watering Can",
+        },
+        ["Gears To Use"] = {
+            -- "Common Watering Can",
+            -- "Common Sprinkler",
+            -- "Uncommon Sprinkler",
+            -- "Rare Sprinkler",
+            -- "Legendary Sprinkler",
+            -- "Super Sprinkler",
+            -- "Super Watering Can",
+        },
+    },
+    ["Webhook URL"] = "https://discord.com/api/webhooks/1381259950566805524/cuP4uk2P4CpBFT5kMH7-bhNA8ZtBN6ZqdycF_F7FJ14JcfYuq5vbdArnBJcixsYg1fh1",
+    ["Webhook Pet Name"] = {"Golden Dragonfly","Unicorn","Raccoon","Monkey","Bee","Ice Serpent","Robin","Deer"},
+    ["Webhook Pet Rarity"] = {"Mythic", "Super", "Secret"},
+    ["Webhook Seed Name"] = {"Rainbow", "Gold"},
+    ["Webhook Note"] = "xx",
+    ["Discord ID"] = "xxx",
+    ["Mail To Username"] = {"Hirottidayo"},
+    ["Items To Mail"] = {
+        ["Pet"] = {
+            ["Golden Dragonfly"] = 1,
+            ["Unicorn"] = 1,
+            ["Raccoon"] = 1,
+            ["Ice Serpent"] = 1,
+        },
+        ["Seed"] = {
+            ["Rainbow"] = 2,
+            ["Gold"] = {Amount = 20, To = {"AlexEwout2006", "AlexEwout2006"}}, 
+            ["Mushroom"] = {Amount = 1, To = "AlexEwout2006"},
+            ["Dragon's Breath"] = 1,
+        },
+        ["Gear"] = {
+            ["Super Sprinkler"] = 1,
+			["Super Watering Can"] = 1,
+        },
+    },
+    ["Claim Mail"] = true,
+    ["Auto Plant"] = true,
+    ["Limit Auto Plant"] = 800,
+    ["Blacklist Seed"] = {"Rainbow"}
 }
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/c9ea3aa6c782de82dee4bcf6b9a9d03e.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66adeacbfb46c0ea4883aefee367292a.lua"))()
 
 task.wait(100)
 task.wait(30)
