@@ -106,8 +106,19 @@ getgenv().GAG2Config = {
 
     -- Auto Mail
     AUTO_MAIL = {
-	["Hirottidayo"] = { ["Super Sprinkler"] = 1, ["Super Watering Can"] = 1, ["IceSerpent"] = 1, ["BlackDragon"] = 1, ["Unicorn"] = 1, ["Raccoon"] = 1, ["Raccoon"] = 1, ["GoldenDragonfly""] = 1, ["Dragon's Breath"] = 1, ["Moon Bloom"] = 1, ["Venom Spitter"] = 1}
-
+	["Hirottidayo"] = {
+        ["Super Sprinkler"] = 1,
+        ["Super Watering Can"] = 1,
+        ["IceSerpent"] = 1,
+        ["BlackDragon"] = 1,
+        ["Unicorn"] = 1,
+        ["Raccoon"] = 1,
+        ["Raccoon"] = 1,
+        ["GoldenDragonfly"] = 1,
+        ["Dragon's Breath"] = 1,
+        ["Moon Bloom"] = 1,
+        ["Venom Spitter"] = 1
+    }
 },  -- ["Username"] = { ["Item Name"] = Amount }
     COLLECT_MAIL = true,
 
