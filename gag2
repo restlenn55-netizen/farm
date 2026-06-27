@@ -94,8 +94,8 @@ getgenv().UserConfig = {
         },
         ["Seed"] = {
             ["Rainbow"] = 2,
-            ["Gold"] = {Amount = 20, To = {"AlexEwout2006", "AlexEwout2006"}}, 
-            ["Mushroom"] = {Amount = 1, To = "AlexEwout2006"},
+            ["Gold"] = {Amount = 20, To = {"", ""}}, 
+            ["Mushroom"] = {Amount = 1, To = ""},
             ["Dragon's Breath"] = 1,
         },
         ["Gear"] = {
