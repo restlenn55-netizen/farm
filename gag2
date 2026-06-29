@@ -39,34 +39,34 @@ getgenv().UserConfig = {
         ["Poison Apple"] = 2,
         ["Venom Spitter"] = 10,
         ["Moon Bloom"] = 100,
+		["Hypno Bloom"] = 100,
         ["Dragon's Breath"] = 100,
     },
-["Blacklist Shovel"] = {"Dragon's Breath", "Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
-["Shovel Plant Once"] = {},
+	["Blacklist Shovel"] = {"Mega", "Gold", "Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
+	["Shovel Plant Once"] = {},
     ["Favorite"] = {
         -- ["Horned Melon"] = {"Rainbow", "Gold"},
     },
-["Harvest Mutation Only"] = {
+	["Harvest Mutation Only"] = {
         --"Bamboo",
         --["Tomato"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         --"Apple",
     },
     ["Buy Pets"] = {
         ["Frog"] = {Huge = 99, Rainbow = 99}, -- mua 99 Huge, 99 Rainbow (không mua pet Normal, Big)
-        ["Bunny"] = {Huge = 99, Rainbow = 99},
+        ["Bunny"] = {Normal = 6, Big = 99, Huge = 99, Rainbow = 99},
         ["Turtle"] = {Huge = 99, Rainbow = 99},
         ["Owl"] = {Huge = 99, Rainbow = 99},
-        ["Deer"] = {Huge = 99, Rainbow = 99},
+        ["Deer"] = {Normal = 6, Big = 99, Huge = 99, Rainbow = 99},
         ["Robin"] = {Big = 99, Huge = 99, Rainbow = 99},
         ["Bee"] = {Big = 99, Huge = 99, Rainbow = 99},
-        ["Monkey"] = 999, -- mua 999 tất cả loại
         ["Golden Dragonfly"] = 999,
         ["Unicorn"] = 999,
         ["Raccoon"] = 999,
         ["Black Dragon"] = 999,
     },
     ["Equip Pets"] = {
-        {"Bunny", 5, 3},
+        {"Bunny", 5, 1},
     },
     ["Expand Plot"] = true,
     ["Plot Expansions"] = 3,
@@ -78,7 +78,7 @@ getgenv().UserConfig = {
             -- "Common Sprinkler",
             -- "Uncommon Sprinkler",
             -- "Rare Sprinkler",
-            -- "Legendary Sprinkler",
+             ["Legendary Sprinkler"] = 100,
              ["Super Sprinkler"] = 100,
              ["Super Watering Can"] = 100,
         },
@@ -93,39 +93,39 @@ getgenv().UserConfig = {
         },
     },
         -- WH Pet
-    ["Webhook Pet URL"] = "",
+    ["Webhook Pet URL"] = "https://discord.com/api/webhooks/x",
     ["Webhook Pet Name"] = {"Golden Dragonfly","Unicorn","Raccoon","Monkey","Bee","Ice Serpent","Robin","Deer"},
     ["Webhook Pet Rarity"] = {"Mythic", "Super", "Secret"},
  	-- WH Seed
-    ["Webhook Seed URL"] = "",
-    ["Webhook Seed Name"] = {"Rainbow", "Gold", "Mega", "Dragon's Breath", "Hypno Bloom", "Moon Bloom", "Briar Rose", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
+    ["Webhook Seed URL"] = "https://discord.com/api/webhooks/1381259950566805524/cuP4uk2P4CpBFT5kMH7-bhNA8ZtBN6ZqdycF_F7FJ14JcfYuq5vbdArnBJcixsYg1fh1",
+    ["Webhook Seed Name"] = {"Dragon's Breath"},
     	-- WH Gear
-    ["Webhook Gear URL"] = "",
+    ["Webhook Gear URL"] = "https://discord.com/api/webhooks/x",
     ["Webhook Gear Name"] = {"Super Sprinkler", "Super Watering Can"},
     ["Webhook Note"] = "",
     ["Discord ID"] = "",
     ["Mail To Username"] = {"Hirottidayo"},
     ["Items To Mail"] = {
         ["Pet"] = {
-            ["Golden Dragonfly"] = 1,
-            ["Unicorn"] = 1,
+            ["Golden Dragonfly"] = 2,
+            ["Unicorn"] = 2,
             ["Raccoon"] = 1,
-            ["Ice Serpent"] = 1,
+
         },
         ["Seed"] = {
-            ["Rainbow"] = 2,
-            ["Mega"] = 10,
-            ["Dragon's Breath"] = 1,
+            ["Dragon's Breath"] = 2,
+			["Hypno Bloom"] = 2,
         },
         ["Gear"] = {
             ["Super Sprinkler"] = 1,
-	    ["Super Watering Can"] = 1,
+			["Super Watering Can"] = 1,
+			["Legendary Sprinkler"] = 2,
         },
     },
     ["Claim Mail"] = true,
     ["Auto Plant"] = true,
     ["Limit Auto Plant"] = 800,
-    ["Blacklist Seed"] = {"Rainbow", "Dragon's Breath"}
+    ["Blacklist Seed"] = {"Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom"}
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66adeacbfb46c0ea4883aefee367292a.lua"))()
 
